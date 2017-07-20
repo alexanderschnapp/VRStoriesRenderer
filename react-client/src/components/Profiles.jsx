@@ -8,19 +8,19 @@ import Profile from './Profile.jsx';
 
 
 const Profiles = props => {
-let x = -6;
-return (
-  <Entity>
-  {
-    props.friends.map(friend => {
-      x +=2
-      return (
-        <Profile toggle={props.toggle} x={x} friend={friend}/>
-      )
-    })
-  }
-  </Entity>
-);
+  let x = -6;
+  return (
+    <Entity>
+    {
+      props.friends.map(friend => {
+        x +=2
+        return (
+          <Profile toggle={props.toggle} x={x} friend={friend}/> 
+        )
+      })
+    }
+    </Entity>
+  );
 }
 
 export default Profiles;

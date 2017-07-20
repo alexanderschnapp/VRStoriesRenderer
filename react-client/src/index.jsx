@@ -7,20 +7,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Cursor from './components/Cursor.jsx';
 import Profiles from './components/Profiles.jsx';
+import mockData from './mockData.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      friends: [{ first: 'Alex', pic: 'https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/65fa961e-8f22-4fe6-a420-3c3c26dd2953.jpg._CB289161999__SL300__.jpg'},
-                { first: 'Anna', pic: 'https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/65fa961e-8f22-4fe6-a420-3c3c26dd2953.jpg._CB289161999__SL300__.jpg'},
-                { first: 'Corey', pic: 'https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/65fa961e-8f22-4fe6-a420-3c3c26dd2953.jpg._CB289161999__SL300__.jpg'}],
+      friends: mockData.friends,
+      user: mockData.user,
       toggle: true,
       background: <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>
     }
   }
 
   toggle () {
+    console.log(this.state.friends);
     console.log('toggle!')
     if (!this.state.toggle) {
       this.setState({
